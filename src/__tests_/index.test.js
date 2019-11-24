@@ -2,10 +2,10 @@ const PropTypes = require('prop-types');
 const React = require('react');
 const TestRenderer = require('react-test-renderer');
 
-const propUp = require('../index');
+const propellor = require('../index');
 const {getPropInfo, getDefaults, getTypes} = require('../index');
 
-describe('propUp', () => {
+describe('propellor', () => {
   it('should test 1', () => {
     const propInfo = {
       installPackage: 'func',
@@ -17,7 +17,7 @@ describe('propUp', () => {
         isRequired: true
       }
     };
-    const propTypes = getPropInfo(propInfo);
+    const {propTypes} = getPropInfo(propInfo);
     const result = {
       installPackage: PropTypes.func,
       isCool: PropTypes.bool,
@@ -34,7 +34,7 @@ describe('propUp', () => {
       name: 'string'
     };
 
-    propUp(App, propInfo);
+    propellor(App, propInfo);
 
     const testRenderer = TestRenderer.create(<App name="mello" />);
 
@@ -51,7 +51,7 @@ describe('propUp', () => {
       }
     };
 
-    propUp(App, propInfo);
+    propellor(App, propInfo);
 
     const testRenderer = TestRenderer.create(<App />);
     const testInstance = testRenderer.root;

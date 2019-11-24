@@ -1,4 +1,4 @@
-# prop-up
+# propellor
 
 ```
 // Tired
@@ -15,7 +15,7 @@ Component.defaultProps = {
 
 // Wired
 
-propUp(Component, {
+propellor(Component, {
   installPackage: 'func',
   name: 'string',
   version: {

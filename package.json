@@ -1,5 +1,5 @@
 {
-  "name": "prop-up",
+  "name": "propellor",
   "version": "0.0.0",
   "description": "A util for working with prop-types.",
   "scripts": {
@@ -33,9 +33,9 @@
     "prop-types": "^15.7.2"
   },
   "source": "src/index.js",
-  "main": "dist/foo.js",
-  "module": "dist/foo.mjs",
-  "unpkg": "dist/foo.umd.js",
+  "main": "dist/propellor.js",
+  "module": "dist/propellor.mjs",
+  "unpkg": "dist/propellor.umd.js",
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -85,12 +85,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/romellogoodman/prop-up.git"
+    "url": "git+https://github.com/romellogoodman/propellor.git"
   },
   "bugs": {
-    "url": "https://github.com/romellogoodman/prop-up/issues"
+    "url": "https://github.com/romellogoodman/propellor/issues"
   },
-  "homepage": "https://github.com/romellogoodman/prop-up#readme",
+  "homepage": "https://github.com/romellogoodman/propellor#readme",
   "keywords": [
     "prop-types",
     "react"
