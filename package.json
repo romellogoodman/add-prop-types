@@ -1,0 +1,38 @@
+{
+  "name": "prop-up",
+  "version": "1.0.0",
+  "description": "A util for working with prop-types.",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "microbundle": "^0.11.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2"
+  },
+  "source": "src/index.js",
+  "main": "dist/foo.js",
+  "module": "dist/foo.mjs",
+  "unpkg": "dist/foo.umd.js",
+  "author": "Romello Goodman",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romellogood/prop-up.git"
+  },
+  "bugs": {
+    "url": "https://github.com/romellogood/prop-up/issues"
+  },
+  "keywords": [
+    "prop-types",
+    "react"
+  ],
+  "homepage": "https://github.com/romellogood/prop-up#readme"
+}
