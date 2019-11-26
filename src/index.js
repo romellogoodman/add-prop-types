@@ -4,7 +4,7 @@ const getPropInfo = propObj => {
   const defaultProps = {};
   const propTypes = {};
 
-  console.log('propellor -', propObj, Object.keys(propObj));
+  console.log('addPropTypes -', propObj, Object.keys(propObj));
 
   Object.keys(propObj).forEach(key => {
     const propValue = propObj[key];
@@ -38,7 +38,7 @@ const getTypes = propObj => {
   return getPropInfo(propObj).propTypes;
 };
 
-const propellor = (Component, propObj) => {
+const addPropTypes = (Component, propObj) => {
   const {defaultProps, propTypes} = getPropInfo(propObj);
 
   Component.defaultProps = defaultProps;
@@ -47,7 +47,7 @@ const propellor = (Component, propObj) => {
   return Component;
 };
 
-const moduleExport = (module.exports = propellor);
+const moduleExport = (module.exports = addPropTypes);
 
 moduleExport.getPropInfo = getPropInfo;
 moduleExport.getDefaults = getDefaults;

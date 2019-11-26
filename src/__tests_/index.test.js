@@ -2,11 +2,11 @@ const PropTypes = require('prop-types');
 const React = require('react');
 const TestRenderer = require('react-test-renderer');
 
-const propellor = require('../index');
+const addPropTypes = require('../index');
 const {getPropInfo, getDefaults, getTypes} = require('../index');
 
-describe('propellor', () => {
-  it('should test 1', () => {
+describe('getPropInfo', () => {
+  it('should match', () => {
     const propInfo = {
       installPackage: 'func',
       isCool: 'bool',
@@ -27,21 +27,23 @@ describe('propellor', () => {
 
     expect(propTypes).toEqual(result);
   });
+});
 
-  it('should something propTypes', () => {
+describe('addPropTypes', () => {
+  it('should add propTypes', () => {
     const App = ({name}) => <p>hello {name}</p>;
     const propInfo = {
       name: 'string'
     };
 
-    propellor(App, propInfo);
+    addPropTypes(App, propInfo);
 
     const testRenderer = TestRenderer.create(<App name="mello" />);
 
     expect(testRenderer.toJSON().children).toEqual(['hello ', 'mello']);
   });
 
-  it('should something defaultProps', () => {
+  it('should add defaultProps', () => {
     const App = ({name}) => <p>hello {name}</p>;
     const propInfo = {
       name: {
@@ -51,7 +53,7 @@ describe('propellor', () => {
       }
     };
 
-    propellor(App, propInfo);
+    addPropTypes(App, propInfo);
 
     const testRenderer = TestRenderer.create(<App />);
     const testInstance = testRenderer.root;

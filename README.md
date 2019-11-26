@@ -1,4 +1,4 @@
-# propellor
+# add-prop-types
 
 ```
 // Tired
@@ -15,7 +15,7 @@ Component.defaultProps = {
 
 // Wired
 
-propellor(Component, {
+addPropTypes(Component, {
   installPackage: 'func',
   name: 'string',
   version: {

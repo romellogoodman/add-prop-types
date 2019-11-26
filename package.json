@@ -1,6 +1,6 @@
 {
-  "name": "propellor",
-  "version": "0.0.0",
+  "name": "add-prop-types",
+  "version": "0.0.1",
   "description": "A util for working with prop-types.",
   "scripts": {
     "build": "microbundle",
@@ -16,7 +16,7 @@
     "@babel/preset-react": "^7.7.4",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
-    "eslint": "^6.6.0",
+    "eslint": "^6.7.1",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
@@ -33,9 +33,9 @@
     "prop-types": "^15.7.2"
   },
   "source": "src/index.js",
-  "main": "dist/propellor.js",
-  "module": "dist/propellor.mjs",
-  "unpkg": "dist/propellor.umd.js",
+  "main": "dist/lib.js",
+  "module": "dist/lib.mjs",
+  "unpkg": "dist/lib.umd.js",
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -85,12 +85,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/romellogoodman/propellor.git"
+    "url": "git+https://github.com/romellogoodman/add-prop-types.git"
   },
   "bugs": {
-    "url": "https://github.com/romellogoodman/propellor/issues"
+    "url": "https://github.com/romellogoodman/add-prop-types/issues"
   },
-  "homepage": "https://github.com/romellogoodman/propellor#readme",
+  "homepage": "https://github.com/romellogoodman/add-prop-types#readme",
   "keywords": [
     "prop-types",
     "react"
