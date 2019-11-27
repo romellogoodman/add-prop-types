@@ -32,7 +32,7 @@ addPropTypes(Component, {
 
 ### General Usage
 
-A String shorthand argument is supported by most types. See below in complete usage for supported and unsupported types.
+A string shorthand argument is supported by most types. See below in complete usage for supported and unsupported types.
 
 ```
 addPropTypes(Component, {
@@ -110,6 +110,8 @@ addPropTypes(Component, {
   // TODO: PropTypes.shape
 
   // TODO: PropTypes.exact
+
+  // ---- Custom Types
 
   // Custom prop
   customProp: function(props, propName, componentName) {
