@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/add-prop-types.svg)](https://badge.fury.io/js/add-prop-types)
 
-Making [prop-types]('https://reactjs.org/docs/typechecking-with-proptypes.html') easy to work with.
+Making [prop-types](https://reactjs.org/docs/typechecking-with-proptypes.html) easy to work with.
 
 ```
 // Tired
