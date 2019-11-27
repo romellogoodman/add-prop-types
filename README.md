@@ -1,5 +1,7 @@
 # add-prop-types
 
+Making [prop-types]('https://reactjs.org/docs/typechecking-with-proptypes.html') easy to work with.
+
 ```
 // Tired
 
