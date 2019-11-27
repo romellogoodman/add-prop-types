@@ -1,6 +1,6 @@
 {
   "name": "add-prop-types",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A util for working with prop-types.",
   "scripts": {
     "build": "microbundle",

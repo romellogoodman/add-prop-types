@@ -27,3 +27,90 @@ addPropTypes(Component, {
   },
 });
 ```
+
+### General Usage
+
+A String shorthand argument is supported by most types. See below in complete usage for supported and unsupported types.
+
+```
+addPropTypes(Component, {
+firstName: 'string',
+lastName: 'string',
+});
+```
+
+The object argument is supported by all types and allows for the setting of default and required props. Some types require the object argument, refer to complete usage for the list.
+
+```
+addPropTypes(Component, {
+  firstName: {
+    type: 'string',
+    default: 'first name',
+    isRequired: true
+  },
+  lastName: {
+    type: 'string',
+    default: 'last name'
+  },
+  nicknames: {
+    type: 'arrayOf',
+    typeValue: 'string'
+  }
+});
+```
+
+### Complete Usage
+
+```
+addPropTypes(Component, {
+  // PropTypes.array
+  optionalArray: 'array',
+
+  // PropTypes.bool
+  optionalBool: 'bool',
+
+  // PropTypes.func
+  optionalFunc: 'func',
+
+  // PropTypes.number
+  optionalNumber: 'number',
+
+  // PropTypes.object
+  optionalObject: 'object',
+
+  // PropTypes.string
+  optionalString: 'string',
+
+  // PropTypes.symbol
+  optionalSymbol: 'symbol',
+
+  // PropTypes.node
+  optionalNode: 'node',
+
+  // PropTypes.element
+  optionalElement: 'element',
+
+  // PropTypes.elementType
+  optionalElementType: 'elementType',
+
+  // ---- Types requiring the object argument
+
+  // TODO: PropTypes.instanceOf
+
+  // TODO: PropTypes.oneOf
+
+  // TODO: PropTypes.oneOfType
+
+  // TODO: PropTypes.arrayOf
+
+  // TODO: PropTypes.objectOf
+
+  // TODO: PropTypes.shape
+
+  // TODO: PropTypes.exact
+
+  // TODO: Custom prop
+
+  // TODO: Custom PropTypes.arrayOf
+});
+```
