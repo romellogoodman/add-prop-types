@@ -4,8 +4,6 @@ const getPropInfo = propObj => {
   const defaultProps = {};
   const propTypes = {};
 
-  console.log('addPropTypes -', propObj, Object.keys(propObj));
-
   Object.keys(propObj).forEach(key => {
     const propValue = propObj[key];
     const isObject = typeof propValue === 'object';
