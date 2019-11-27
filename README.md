@@ -111,7 +111,19 @@ addPropTypes(Component, {
 
   // TODO: PropTypes.exact
 
-  // TODO: Custom prop
+  // Custom prop
+  customProp: function(props, propName, componentName) {
+    if (!/matchme/.test(props[propName])) {
+      return new Error(
+        'Invalid prop `' +
+          propName +
+          '` supplied to' +
+          ' `' +
+          componentName +
+          '`. Validation failed.'
+      );
+    }
+  },
 
   // TODO: Custom PropTypes.arrayOf
 });

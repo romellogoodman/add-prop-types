@@ -1,22 +1,43 @@
 const PropTypes = require('prop-types');
 
+const isFunc = item => typeof item === 'function';
+const isObject = item => typeof item === 'object';
+
+const shorthandTypes = {
+  array: true,
+  bool: true,
+  func: true,
+  number: true,
+  object: true,
+  string: true,
+  symbol: true,
+  node: true,
+  element: true,
+  elementType: true
+};
+
 const getPropInfo = propObj => {
   const defaultProps = {};
   const propTypes = {};
 
   Object.keys(propObj).forEach(key => {
     const propValue = propObj[key];
-    const isObject = typeof propValue === 'object';
+    const propValueType = isObject(propValue) ? propValue.type : propValue;
+
+    if (isFunc(propValue)) {
+      propTypes[key] = propValue;
+      return;
+    }
 
     const {default: defaultValue, isRequired, type} = isObject
       ? {
-          type: PropTypes[propValue.type],
+          type: PropTypes[propValueType],
           default: propValue.default,
           isRequired: propValue.isRequired
         }
-      : {type: PropTypes[propValue]};
+      : {type: PropTypes[propValueType]};
 
-    if (type) {
+    if (shorthandTypes[propValueType] && type) {
       propTypes[key] = isRequired ? type.isRequired : type;
 
       if (typeof defaultValue !== 'undefined') {

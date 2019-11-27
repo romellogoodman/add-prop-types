@@ -1,11 +1,11 @@
 {
   "name": "add-prop-types",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A util for working with prop-types.",
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "prepublishOnly": "npm run test && npm run build",
+    "prepublishOnly": "npm test && npm run build",
     "test": "jest"
   },
   "dependencies": {
