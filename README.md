@@ -97,19 +97,60 @@ addPropTypes(Component, {
 
   // ---- Types requiring the object argument
 
-  // TODO: PropTypes.instanceOf
+  // PropTypes.instanceOf
+  optionalMessage: {
+    type: 'instanceOf',
+    typeValue: Message
+  },
 
-  // TODO: PropTypes.oneOf
+  // PropTypes.oneOf
+  optionalEnum: {
+    type: 'oneOf',
+    typeValue: ['News', 'Photos']
+  },
 
-  // TODO: PropTypes.oneOfType
+  // PropTypes.oneOfType
+  optionalUnion: {
+    type: 'oneOfType',
+    typeValue: [
+      'string',
+      'number',
+      {
+        type: 'instanceOf',
+        typeValue: Message
+      }
+    ]
+  },
 
-  // TODO: PropTypes.arrayOf
+  // PropTypes.arrayOf
+  optionalArrayOf: {
+    type: 'arrayOf',
+    typeValue: ['number']
+  },
 
-  // TODO: PropTypes.objectOf
+  // PropTypes.objectOf
+  optionalObjectOf: {
+    type: 'objectOf',
+    typeValue: ['number']
+  },
 
-  // TODO: PropTypes.shape
+  // PropTypes.shape
+  optionalObjectWithShape: {
+    type: 'shape',
+    typeValue: {
+      color: 'string',
+      fontSize: 'number'
+    }
+  },
 
-  // TODO: PropTypes.exact
+  // PropTypes.exact
+  optionalObjectWithStrictShape: {
+    type: 'exact',
+    typeValue: {
+      name: 'string',
+      quantity: 'number'
+    }
+  },
 
   // ---- Custom Types
 
@@ -127,6 +168,21 @@ addPropTypes(Component, {
     }
   },
 
-  // TODO: Custom PropTypes.arrayOf
+  // Custom PropTypes.arrayOf
+  customArrayProp: {
+    type: 'arrayOf',
+    typeValue: function(propValue, key, componentName, location, propFullName) {
+      if (!/matchme/.test(propValue[key])) {
+        return new Error(
+          'Invalid prop `' +
+            propFullName +
+            '` supplied to' +
+            ' `' +
+            componentName +
+            '`. Validation failed.'
+        );
+      }
+    }
+  }
 });
 ```
